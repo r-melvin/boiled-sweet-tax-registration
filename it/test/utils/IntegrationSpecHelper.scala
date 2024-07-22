@@ -87,7 +87,7 @@ trait IntegrationSpecHelper extends AnyWordSpec with Matchers
     await(buildClient(uri).withHttpHeaders("Authorization" -> "Bearer123").delete())
   }
 
-  val baseUrl: String = "/boiled-sweet-tax-registration"
+  val baseUrl: String = "/boiled-sweet-tax"
 
   private def buildClient(path: String): WSRequest =
     ws.url(s"http://localhost:$port$baseUrl$path").withFollowRedirects(false)
